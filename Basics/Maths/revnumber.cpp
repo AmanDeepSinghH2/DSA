@@ -12,5 +12,8 @@ int reverse(int n) {
 }
 
 int main(){
-    
+    int n;
+    cin>>n;
+    int reversedNumber = reverse(n);
+    cout << "Reversed Number: " << reversedNumber << endl;
 }
