@@ -1,24 +1,29 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <vector>
 using namespace std;
 
-bool sorted(vector<int> &arr,int n){
-    for(int i=0;i<=n;i++){
-        if(arr[i]>arr[i+1]){
-            swap(arr[i],arr[i+1]);
+bool sorted(const vector<int> &arr, int n) {
+    for (int i = 0; i < n - 1; i++) {
+        if (arr[i] > arr[i + 1]) {
             return false;
         }
-        else{
-            return true;
-        }
     }
+    return true;
 }
 
-int main(){
+int main() {
     int n;
-    cin>>n;
+    cin >> n;
     vector<int> arr;
-    for(int i=0;i<=n;i++){
-        cin>>arr[i];
+    for (int i = 0; i < n; i++) {
+        int x;
+        cin >> x;
+        arr.push_back(x);
     }
-    return sorted(arr,n);
+    if (sorted(arr, n)) {
+        cout << "Sorted" << endl;
+    } else {
+        cout << "Not sorted" << endl;
+    }
+    return 0;
 }
