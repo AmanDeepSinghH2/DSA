@@ -8,7 +8,7 @@ class Solution{
         while(i<s.size() && s[i]==' ') i++;
         int sign=1;
         if(i<s.size()&&(s[i]=='+' || s[i]=='-')){
-            sign=(s[i]='-')?-1:1;
+            sign=(s[i]=='-')?-1:1;
             i++;
         }
         return fn(s,i,0,sign);
