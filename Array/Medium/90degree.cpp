@@ -9,7 +9,6 @@ void rotate(vector<vector<int>>&matrix){
         swap(matrix[i][j], matrix[j][i]);
     }
     }
-    //reversing each row of the matrix
     for (int i = 0; i < n; i++) {
     reverse(matrix[i].begin(), matrix[i].end());
     }
